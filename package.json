@@ -1,0 +1,20 @@
+{
+  "name": "vis_prog",
+  "version": "1.0.0",
+  "description": "IP-414 Romashko Dmitriy",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+  
+}
