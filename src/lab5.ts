@@ -77,19 +77,16 @@ export const sortGroups = ((key: any) => {
     });
 }) as GroupSortStep<any>;
 
-// вспомогательные типы “списков шагов”
 type WhereList<T> = readonly ReturnType<WhereStep<T>>[];
 type SortList<T> = readonly ReturnType<SortStep<T>>[];
 
 type HavingList<T, K extends keyof T> = readonly ReturnType<HavingStep<T>>[];
 type GroupSortList<T, K extends keyof T> = readonly ReturnType<GroupSortStep<T>>[];
 
-// вариант 1: без группировки: where* -> sort*
 export function query<T>(
   ...steps: [...WhereList<T>, ...SortList<T>]
 ): Transform<T[], T[]>;
 
-// вариант 2: с группировкой: where* -> groupBy -> having* -> sortGroups* 
 export function query<T, K extends keyof T>(
   ...steps: [
     ...WhereList<T>,

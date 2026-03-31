@@ -96,8 +96,6 @@ export function findById<T extends HasId>(items: T[], id: number): T | undefined
   return items.find((item) => item.id === id);
 }
 
-// ===== LAB3 =====
-
 type CsvRow = Record<string, string | number>;
 
 function coerceCsvValue(value: string): string | number {
